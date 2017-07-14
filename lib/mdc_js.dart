@@ -27,6 +27,7 @@ class MDCPersistentDrawer {
   external set open(bool open);
 }
 
+@JS()
 abstract class _Drawer {
   external bool get open;
   external set open(bool open);

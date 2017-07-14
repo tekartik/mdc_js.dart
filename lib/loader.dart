@@ -8,8 +8,8 @@ JavascriptScriptLoader _mdcJsLoader = new JavascriptScriptLoader(
 StylesheetLoader _mdcCssLoader = new StylesheetLoader(
     "packages/tekartik_mdc_asset/material-components-web.min.css");
 
-FutureOr loadMdcJs() => _mdcJsLoader.load();
-Future loadMdcCss() => _mdcCssLoader.load();
+FutureOr loadMdcJs() => _mdcJsLoader.run();
+Future loadMdcCss() => _mdcCssLoader.run();
 
 Future loadMdcCssJs() async {
   await waitAll([

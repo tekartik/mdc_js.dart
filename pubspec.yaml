@@ -9,7 +9,7 @@ environment:
 
 dependencies:
   tekartik_browser_utils:
-      git: git://github.com/tekartik/tekartik_browser_utils.dart
+      git: git://github.com/tekartik/browser_utils.dart
 dev_dependencies:
   tekartik_mdc_asset:
     git: git://github.com/tekartik/mdc_asset.dart
@@ -22,7 +22,7 @@ dev_dependencies:
   tekartik_material_asset:
     git: git://github.com/tekartik/material_asset.dart
   tekartik_app_utils:
-    git: git://github.com/tekartik/tekartik_app_utils.dart
+    git: git://github.com/tekartik/app_utils.dart
 
 # Uncomment the following in sdk 1.24+ to make pub serve
 # use dartdevc (webdev.dartlang.org/tools/dartdevc).

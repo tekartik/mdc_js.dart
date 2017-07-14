@@ -14,17 +14,4 @@ main() async {
     () => loadMaterialIconCss(),
     () => loadRobotoFontCss()
   ]);
-  //await autoInit();
-  var drawerEl = document.querySelector('.mdc-temporary-drawer');
-  //var MDCPersistentDrawer = mdc.drawer.MDCPersistentDrawer;
-  var drawer = new MDCTemporaryDrawer(drawerEl);
-  document.querySelector('.demo-menu').onClick.listen((_) {
-    drawer.open = !drawer.open;
-  });
-  drawerEl.on['MDCTemporaryDrawer:open'].listen((_) {
-    print('Received MDCTemporaryDrawer:open');
-  });
-  drawerEl.on['MDCTemporaryDrawer:close'].listen((_) {
-    print('Received MDCTemporaryDrawer:close');
-  });
 }
