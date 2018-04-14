@@ -1,6 +1,6 @@
 name: tekartik_mdc_js
 description: An absolute bare-bones web app.
-version: 0.1.0
+version: 0.2.0
 #homepage: https://www.example.com
 #author: alex <email@example.com>
 
@@ -9,12 +9,12 @@ environment:
 
 dependencies:
   tekartik_browser_utils:
-      git: git://github.com/tekartik/browser_utils.dart
+    git: git://github.com/tekartik/browser_utils.dart
+  dart_to_js_script_rewriter: ">=1.0.1"
 dev_dependencies:
   tekartik_mdc_asset:
     git: git://github.com/tekartik/mdc_asset.dart
   browser: ">=0.10.0"
-  dart_to_js_script_rewriter: ">=1.0.1"
   test: any
   dev_test: any
   chrome_travis:
@@ -35,4 +35,4 @@ dependency_overrides:
 #    path: ../mdc_asset.dart
 
 transformers:
-- dart_to_js_script_rewriter
+# - dart_to_js_script_rewriter
