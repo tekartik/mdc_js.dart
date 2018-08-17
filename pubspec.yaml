@@ -1,6 +1,6 @@
 name: tekartik_mdc_js
 description: An absolute bare-bones web app.
-version: 0.2.0
+version: 0.3.0
 #homepage: https://www.example.com
 #author: alex <email@example.com>
 
@@ -12,13 +12,11 @@ dependencies:
     git:
       url: git://github.com/tekartik/browser_utils.dart
       ref: dart2
-  dart_to_js_script_rewriter: ">=1.0.1"
 dev_dependencies:
   tekartik_mdc_asset:
     git:
       url: git://github.com/tekartik/mdc_asset.dart
       ref: dart2
-  browser: ">=0.10.0"
   test: any
   dev_test: any
   chrome_travis:
@@ -33,16 +31,3 @@ dev_dependencies:
     git:
       url: git://github.com/tekartik/app_utils.dart
       ref: dart2
-
-# Uncomment the following in sdk 1.24+ to make pub serve
-# use dartdevc (webdev.dartlang.org/tools/dartdevc).
-web:
-  compiler:
-    debug: dartdevc
-
-dependency_overrides:
-#  tekartik_mdc_asset:
-#    path: ../mdc_asset.dart
-
-transformers:
-# - dart_to_js_script_rewriter
