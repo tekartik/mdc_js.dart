@@ -17,6 +17,7 @@ dev_dependencies:
     git:
       url: git://github.com/tekartik/mdc_asset.dart
       ref: dart2
+    version: '>=0.42.1'
   test: any
   dev_test: any
   chrome_travis:
@@ -31,3 +32,6 @@ dev_dependencies:
     git:
       url: git://github.com/tekartik/app_utils.dart
       ref: dart2
+  build_runner: '>=0.9.1'
+  build_test: '>=0.10.2'
+  build_web_compilers: '>=0.4.0'
