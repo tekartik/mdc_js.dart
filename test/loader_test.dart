@@ -1,4 +1,4 @@
-@TestOn("browser")
+@TestOn('browser')
 import 'package:tekartik_mdc_js/loader.dart';
 import 'package:test/test.dart';
 

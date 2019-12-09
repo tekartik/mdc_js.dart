@@ -1,11 +1,11 @@
 @JS('mdc')
 library mdc;
 
-import "package:js/js.dart";
+import 'package:js/js.dart';
 import 'package:tekartik_browser_utils/browser_utils_import.dart';
 
 @JS()
-external autoInit();
+external dynamic autoInit();
 
 /*
 @JS('textfield.MDCTextfield')
