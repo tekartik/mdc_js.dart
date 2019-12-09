@@ -3,6 +3,6 @@
 
 import 'package:tekartik_mdc_js/loader.dart';
 
-main() async {
+Future main() async {
   await loadMdcCssJs();
 }

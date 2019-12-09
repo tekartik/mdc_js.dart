@@ -5,7 +5,7 @@ import 'package:tekartik_common_utils/async_utils.dart';
 import 'package:tekartik_mdc_js/loader.dart';
 import 'package:tekartik_app_utils/material_asset/loader.dart';
 
-main() async {
+Future main() async {
   await waitAll([
     () => loadMdcCssJs(),
     () => loadMaterialIconCss(),

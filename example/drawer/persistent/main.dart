@@ -8,7 +8,7 @@ import 'package:tekartik_mdc_js/loader.dart';
 import 'package:tekartik_app_utils/material_asset/loader.dart';
 import 'package:tekartik_mdc_js/mdc_js.dart';
 
-main() async {
+Future main() async {
   await waitAll([
     () => loadMdcCssJs(),
     () => loadMaterialIconCss(),
@@ -17,7 +17,7 @@ main() async {
   //await autoInit();
   var drawerEl = document.querySelector('.mdc-persistent-drawer');
   //var MDCPersistentDrawer = mdc.drawer.MDCPersistentDrawer;
-  var drawer = new MDCPersistentDrawer(drawerEl);
+  var drawer = MDCPersistentDrawer(drawerEl);
   document.querySelector('.demo-menu').onClick.listen((_) {
     drawer.open = !drawer.open;
   });
