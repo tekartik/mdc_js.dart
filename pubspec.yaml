@@ -1,6 +1,7 @@
 name: tekartik_mdc_js
-description: An absolute bare-bones web app.
+description: Material design web.
 version: 0.3.1
+publish_to: none
 #homepage: https://www.example.com
 #author: alex <email@example.com>
 
