@@ -28,7 +28,7 @@ new project.
   repo has no successor package.
 * If you really must resolve it, the `git://` urls in `pubspec.yaml` have to
   become `https://` first, and the whole dependency set (`tekartik_mdc_asset`,
-  `tekartik_browser_utils`, `tekartik_app_utils`, `chrome_travis`) has to stay
+  `tekartik_browser_utils`, `chrome_travis`) has to stay
   on its `dart2` ref. Do not "fix" the pubspec as a side effect of another
   task.
 * Dependency form used by an app of that era (git, not on pub.dev):
@@ -72,11 +72,12 @@ new project.
   streams: `drawerEl.on['MDCTemporaryDrawer:open']` /
   `['MDCTemporaryDrawer:close']` (and the `MDCPersistentDrawer:`-prefixed pair
   for the persistent one).
-* Fonts and icons are not loaded by this package. The examples pull them from
-  `tekartik_app_utils` (`loadMaterialIconCss()`, `loadRobotoFontCss()` of
-  `package:tekartik_app_utils/material_asset/loader.dart`, backed by the
-  `tekartik_material_asset` assets) and wait for everything with `waitAll` from
-  `package:tekartik_common_utils/async_utils.dart`.
+* Fonts and icons are not loaded by this package. The drawer examples load
+  them with `loadMaterialIconCss()` and `loadRobotoFontCss()` of
+  `example/drawer/material_asset_loader.dart` (`loadStylesheet` of
+  `tekartik_browser_utils` on the `tekartik_material_asset` assets; it used to
+  come from `tekartik_app_utils`, now archived) and wait for everything with
+  `waitAll` from `package:tekartik_common_utils/async_utils.dart`.
 * The markup is ordinary MDC 0.x markup (`mdc-typography` on `<body>`,
   `mdc-temporary-drawer` / `mdc-persistent-drawer` wrappers, `mdc-toolbar`);
   copy it from `example/drawer/*/index.html` rather than writing it from
@@ -133,10 +134,17 @@ Future main() async {
 ```dart
 import 'dart:html';
 
-import 'package:tekartik_app_utils/material_asset/loader.dart';
+import 'package:tekartik_browser_utils/css_utils.dart';
 import 'package:tekartik_common_utils/async_utils.dart';
 import 'package:tekartik_mdc_js/loader.dart';
 import 'package:tekartik_mdc_js/mdc_js.dart';
+
+// Assets of tekartik_material_asset (git dependency of the app).
+Future loadMaterialIconCss() => loadStylesheet(
+    'packages/tekartik_material_asset/font/material-icons/material-icons.css');
+
+Future loadRobotoFontCss() => loadStylesheet(
+    'packages/tekartik_material_asset/font/roboto/roboto-fonts.css');
 
 Future main() async {
   await waitAll([

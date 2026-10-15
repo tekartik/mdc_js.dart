@@ -29,10 +29,6 @@ dev_dependencies:
     git:
       url: git://github.com/tekartik/material_asset.dart
       ref: dart2
-  tekartik_app_utils:
-    git:
-      url: git://github.com/tekartik/app_utils.dart
-      ref: dart2
   build_runner: '>=0.9.1'
   build_test: '>=0.10.2'
   build_web_compilers: '>=0.4.0'

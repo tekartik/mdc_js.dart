@@ -3,10 +3,11 @@
 
 import 'dart:html';
 
-import 'package:tekartik_app_utils/material_asset/loader.dart';
 import 'package:tekartik_common_utils/async_utils.dart';
 import 'package:tekartik_mdc_js/loader.dart';
 import 'package:tekartik_mdc_js/mdc_js.dart';
+
+import '../material_asset_loader.dart';
 
 Future main() async {
   await waitAll([
